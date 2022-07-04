@@ -5,7 +5,7 @@ import ContactsList from 'components/ContactsList/ContactsList';
 import Container from './Container/Container';
 import FilterContacts from './FilterContacts/FilterContacts';
 import s from './/App.module.css';
-
+import { toHaveDisplayValue } from '@testing-library/jest-dom/dist/matchers';
 
 class App extends Component {
   state = {
@@ -17,6 +17,19 @@ class App extends Component {
     ],
     filter: '',
   };
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.contacts !== this.state.contacts) {
+      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+    }
+  }
+
+  componentDidMount() {
+    const contacts = localStorage.getItem('contacts');
+    const parsedContacts = JSON.parse(contacts);
+    console.log(parsedContacts);
+    if (parsedContacts) this.setState({ contacts: parsedContacts });
+  }
 
   formSaveData = ({ name, number }) => {
     const contact = {

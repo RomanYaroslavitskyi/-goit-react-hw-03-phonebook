@@ -43,7 +43,7 @@
     margin: 0 auto;
     margin-top: 10px;
     transform: scale(1);
-    font-size: 14px;
+    font-size: 25px;
     box-shadow: 0px 7px 13px 5px rgb(24 32 26 / 62%);
 }
 
@@ -52,3 +52,4 @@
     color: antiquewhite;
     background-color: #69174e;
 }
+

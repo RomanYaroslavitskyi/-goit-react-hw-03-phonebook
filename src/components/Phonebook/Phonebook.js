@@ -1,4 +1,5 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import { BsFillPersonPlusFill } from 'react-icons/bs';
 import PropTypes from 'prop-types';
 import s from './Phonebook.module.css';
 
@@ -62,7 +63,10 @@ class Phonebook extends Component {
               className={s.input}
             />
           </label>
-          <button type="submit" className={s.btn}> Add contact</button>
+          <button type="submit" className={s.btn}>
+            {' '}
+            <BsFillPersonPlusFill/>
+          </button>
         </form>
       </>
     );
@@ -71,8 +75,7 @@ class Phonebook extends Component {
 
 export default Phonebook;
 
-
 Phonebook.propTypes = {
   findContact: PropTypes.func.isRequired,
-  onSaveSubmit:PropTypes.func.isRequired
+  onSaveSubmit: PropTypes.func.isRequired,
 };

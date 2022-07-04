@@ -1,4 +1,5 @@
 import React from 'react';
+import { BsPersonSquare, BsTrashFill } from 'react-icons/bs';
 import PropTypes from 'prop-types';
 import s from './ContactsList.module.css';
 
@@ -8,7 +9,12 @@ const ContactsList = ({ contacts, onClickDelete }) => {
       {contacts.map(({ id, name, number }) => {
         return (
           <li key={id} className={s.item}>
-            {name} : {number}
+            <span className={s.span}>
+              <BsPersonSquare />
+            </span>
+            <p className={s.text}>
+              {name} : {number}
+            </p>
             <button
               className={s.btn}
               type="button"
@@ -16,7 +22,9 @@ const ContactsList = ({ contacts, onClickDelete }) => {
                 onClickDelete(id);
               }}
             >
-              Delete
+              <span className={ s.btn__span}>
+                <BsTrashFill />
+              </span>
             </button>
           </li>
         );
