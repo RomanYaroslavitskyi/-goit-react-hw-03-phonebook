@@ -8,6 +8,7 @@
 
 .item {
     display: flex;
+    align-items: baseline;
     padding: 0;
     width: 400px;
     color: antiquewhite;
