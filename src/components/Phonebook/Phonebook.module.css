@@ -36,6 +36,8 @@
 }
 
 .btn {
+    display: flex;
+    justify-content: center;
     width: 100px;
     padding: 10px;
     border-radius: 10px;
@@ -52,4 +54,3 @@
     color: antiquewhite;
     background-color: #69174e;
 }
-

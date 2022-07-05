@@ -25,7 +25,6 @@
 }
 
 .btn {
-    position: relative;
     width: 30px;
     height: 30px;
     margin: 0;
@@ -49,11 +48,4 @@
     padding: 0;
     margin: 0;
     margin-right: 10px;
-}
-
-.btn__span {
-    position: absolute;
-    top: 58%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }

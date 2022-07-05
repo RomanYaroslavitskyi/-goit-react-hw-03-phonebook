@@ -22,9 +22,7 @@ const ContactsList = ({ contacts, onClickDelete }) => {
                 onClickDelete(id);
               }}
             >
-              <span className={ s.btn__span}>
-                <BsTrashFill />
-              </span>
+              <BsTrashFill />
             </button>
           </li>
         );
